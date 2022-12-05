@@ -1,0 +1,95 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* height: 100vh; */
+}
+
+.calculadora {
+    border: 2px solid black;
+    height: 400px;
+    width: 300px;
+    margin: 4px;
+    background-color: rgb(76, 158, 190);
+    padding: 10px;
+}
+
+.pantalla, .principal-botones {
+    margin:5px
+}
+
+.pantalla {
+    height: 15%;
+    border: 1px solid black;
+    background-color: rgb(131, 167, 131);
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    line-height: 50px;
+    padding-right: 3px;
+    border-radius: 5px;
+    margin-bottom: 9px;
+
+}
+
+.principal-botones {
+    height: 81%;
+    display: flex;
+    flex-direction: row;
+}
+
+.botones-numeros, .botones-operadores {
+    height: 100%;
+}
+
+.botones-numeros {
+    width: 70%;
+    margin-right: 2.5px;
+}
+
+.botones-operadores {
+    width: 30%;
+    margin-left: 2.5px;
+    padding: 0;
+}
+
+button {
+    margin:5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(235, 215, 181);
+}
+button:hover{
+    background-color: rgb(245, 234, 216);
+
+}
+
+.botones-operadores > button {
+    height: 18.4%;
+    width: 90%;
+}
+
+.botones-numeros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.botones-numeros > button {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    width: 30%;
+}
