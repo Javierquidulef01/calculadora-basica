@@ -7,13 +7,13 @@ let nro1 = null;
 let nroAux= "";
 let operador = "";
 let pantallaAux = "";
-let resultado = 0;
+let resultado = null;
 
 
 function salida(cadena) {
-    console.log(cadena);
+    // console.log(cadena);
     pantallaAux += cadena;
-    console.log(pantallaAux);
+    // console.log(pantallaAux);
     document.querySelector(".pantalla").innerHTML = pantallaAux;
 }
 
@@ -32,6 +32,10 @@ for (let i = 0; i < btnOperadores.length; i++) {
             nro1 = Number(nroAux);
         }
         if (nroAux != "" && operador != "") {
+            if (resultado != null) {
+                // console.log(resultado+""+nroAux)
+                nro1 = Number((resultado+""+nroAux))
+            }
             generarResultado();
         }
         nroAux = "";
@@ -56,6 +60,7 @@ function generarResultado() {
     realizarOperacion(nro1, nroAux, operador);
     pantallaAux = resultado;
     nro1 = resultado;
+    nroAux = "";
     operador = "";
 }
 
